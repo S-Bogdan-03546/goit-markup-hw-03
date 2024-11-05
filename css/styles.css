@@ -1,3 +1,5 @@
+/* #region BASE */
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -24,6 +26,10 @@ ol {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+/* #endregion */
+
+/* #region HEADER */
 
 header {
     background: #FFFFFF;
@@ -91,6 +97,9 @@ header {
     color: #404BBF;
 }
 
+/* #endregion */
+
+/* #region HIRO  */
 
 /*! ------HIRO-------- */
 
@@ -123,6 +132,9 @@ header {
     background-color: #404BBF;
 }
 
+/* #endregion */
+
+/* #region features  */
 
 /*! ----------------features--------- */
 .features {
@@ -149,6 +161,10 @@ header {
     color: #434455;
 }
 
+/* #endregion */
+
+
+/* #region team  */
 
 /*! -------------------team------------ */
 .team {
@@ -192,8 +208,10 @@ header {
     color: #434455;
 }
 
-/*! ---------portfolio------------------- */
+/* #endregion */
 
+/* #region portfolio */
+/*! ---------portfolio------------------- */
 .portfolio {
     background: #fff;
 }
@@ -230,6 +248,9 @@ header {
     color: #434455;
 }
 
+/* #endregion */
+
+/* #region FOOTER */
 
 /*! -------------FOOTER------------ */
 .footer {
@@ -263,3 +284,5 @@ header {
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
+
+/* #endregion */
