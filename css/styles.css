@@ -294,7 +294,7 @@ header {
 .team-img {}
 
 .team-bottom {
-    padding: 32px 16px;
+    padding: 32px 0;
 
 }
 
@@ -350,7 +350,7 @@ header {
 .portfolio-img {}
 
 .portfolio-bottom {
-    padding: 32px 0;
+    padding: 32px 16px;
     border: 1px solid #E7E9FC;
     border-top: none;
 }
@@ -362,7 +362,6 @@ header {
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
-    text-align: center;
 }
 
 .portfolio-text {
