@@ -88,6 +88,7 @@ ol {
 
 header {
     background: #FFFFFF;
+    border-bottom: 1px solid #e7e9fc
 }
 
 .header .container {
@@ -207,6 +208,7 @@ header {
     letter-spacing: 0.04em;
     color: #fff;
     background-color: #4D5AE5;
+    cursor: pointer;
     display: block;
     padding: 16px 32px;
     border: none;
@@ -220,7 +222,6 @@ header {
 /*! інтерактивний елемент (кнопка) */
 .hero-btn:hover,
 .hero-btn:focus {
-    cursor: pointer;
     background-color: #404BBF;
 }
 
@@ -349,7 +350,7 @@ header {
 .portfolio-img {}
 
 .portfolio-bottom {
-    padding: 32px 16px;
+    padding: 32px 0;
     border: 1px solid #E7E9FC;
     border-top: none;
 }
@@ -361,6 +362,7 @@ header {
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .portfolio-text {
@@ -389,6 +391,8 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-logo-inner {
@@ -399,8 +403,6 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd;
-    display: inline-block;
-    margin-bottom: 16px;
 }
 
 .footer-text {
