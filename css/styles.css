@@ -6,25 +6,80 @@ body {
     background-color: #FFFFFF;
 }
 
+/*  дозволяє сектору main займати все вільне місце на головній осі відсуваючи «футер» у її кінець */
+main {
+    flex-grow: 1;
+}
+
+/*! обнуляємо дефолтні відступи */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /*! прибираємо підчеркування всіх посилань */
 a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
+/*! притиcкаєм FOOTER до низу сторінки */
+/* + потрібно задати ще одну властивість для main (задав вверху сss-правил)*/
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /*! прибираємо маркери у списках*/
+/*! обнуляємо дефолтні відступи */
 ul,
 ol {
     list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
+/*! ширина та падінги для контейнера */
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 
 /*! прихований заголовок */
+/*! обнуляємо дефолтні відступи */
 .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+/* #endregion */
+
+/* #region Common Styles */
+.features,
+.team,
+.portfolio {
+    padding: 120px 0;
 }
 
 /* #endregion */
@@ -35,6 +90,17 @@ header {
     background: #FFFFFF;
 }
 
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    /* flex-grow: 1; */
+}
+
 .header-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -43,6 +109,9 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 76px;
 }
 
 .header-logo-inner {
@@ -55,7 +124,10 @@ header {
     color: #2e2f42;
 }
 
-.header-menu-list {}
+.header-menu-list {
+    display: flex;
+    gap: 40px;
+}
 
 .header-menu-item {}
 
@@ -66,6 +138,8 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 /*! інтерактивні елементи (посилання) */
@@ -76,9 +150,13 @@ header {
 
 .header-address {
     font-style: normal;
+    margin-left: auto;
 }
 
-.header-address-list {}
+.header-address-list {
+    display: flex;
+    gap: 40px;
+}
 
 .header-address-item {}
 
@@ -89,6 +167,8 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 /*! інтерактивні елементи (посилання) в активному стані */
@@ -100,11 +180,12 @@ header {
 /* #endregion */
 
 /* #region HIRO  */
-
 /*! ------HIRO-------- */
 
 .hero {
     background: #2e2f42;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -114,6 +195,9 @@ header {
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .hero-btn {
@@ -122,7 +206,15 @@ header {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
-    background: #4D5AE5;
+    background-color: #4D5AE5;
+    display: block;
+    padding: 16px 32px;
+    border: none;
+    margin: 0 auto;
+    min-width: 169px;
+    min-height: 56px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*! інтерактивний елемент (кнопка) */
@@ -135,15 +227,19 @@ header {
 /* #endregion */
 
 /* #region features  */
-
 /*! ----------------features--------- */
 .features {
     background: #fff;
 }
 
-.features-list {}
+.features-list {
+    display: flex;
+    gap: 24px;
+}
 
-.features-item {}
+.features-item {
+    width: calc((100% - 72px) / 4);
+}
 
 .features-subtitle {
     font-weight: 500;
@@ -151,6 +247,7 @@ header {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .features-text {
@@ -163,10 +260,8 @@ header {
 
 /* #endregion */
 
-
 /* #region team  */
-
-/*! -------------------team------------ */
+/*! -------------team------------ */
 .team {
     background: #F4F4FD;
 }
@@ -179,15 +274,28 @@ header {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
+    padding-top: 120px;
+    margin-bottom: 72px;
 }
 
-.team-list {}
+.team-list {
+    display: flex;
+    gap: 24px;
+}
 
 .team-item {
     background-color: #FFFFFF;
+    width: calc((100% - 3 * 24px) / 4);
+    border-radius: 0 0 4px 4px;
+    /* box-shadow: 0 2px 1px 0 rgb(46, 47, 66 0.08), 0 1px 1px 0 rgb(46, 47, 66 0.16), 0 1px 6px 0 rgb(46, 47, 66 0.08); */
 }
 
 .team-img {}
+
+.team-bottom {
+    padding: 32px 16px;
+
+}
 
 .team-subtitle {
     font-weight: 500;
@@ -197,6 +305,7 @@ header {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
+    padding-bottom: 8px;
 }
 
 .team-text {
@@ -224,13 +333,26 @@ header {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
 
-.portfolio-list {}
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
 
-.portfolio-item {}
+.portfolio-item {
+    width: calc((100% - 2 * 24px) / 3);
+}
 
 .portfolio-img {}
+
+.portfolio-bottom {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
 
 .portfolio-subtitle {
     font-weight: 500;
@@ -238,6 +360,7 @@ header {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portfolio-text {
@@ -251,10 +374,11 @@ header {
 /* #endregion */
 
 /* #region FOOTER */
-
 /*! -------------FOOTER------------ */
 .footer {
     background: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -275,6 +399,8 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-text {
@@ -283,6 +409,7 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
 }
 
 /* #endregion */
